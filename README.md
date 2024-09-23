@@ -1,7 +1,7 @@
 # Задача-01
 - Сдать тесты в курсе контент-менеджера - [Сертификат]
 - Установить битрикс и начать разбираться в админке - [woorduluck.ru]
-- Сделать шаблон компонента news.list
+- Сделать шаблон компонента news.list - [news.list]
 
 ### Выполнение
 **Шаг-01** - Копируем из исходного шаблона папку fonts в папку шаблона компонента */bitrix/bitrix/templates/books/components/bitrix/news.list/articles*
@@ -73,3 +73,4 @@ mv css/common.css /var/www/html/bitrix/bitrix/templates/books/components/bitrix/
 
 [Сертификат]: <https://github.com/WoorDuLuck/task-for-trainees/blob/task-01/%D0%9A%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82-%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80.pdf>
 [woorduluck.ru]: <https://woorduluck.ru>
+[news.list]: <https://woorduluck.ru/content/news/spisok-novostey.php>
