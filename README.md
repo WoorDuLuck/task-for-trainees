@@ -4,18 +4,27 @@
 - Сделать шаблон компонента news.list - [news.list]
 
 ### Выполнение
-**Шаг-01** - Копируем из исходного шаблона папку fonts в папку шаблона компонента */bitrix/bitrix/templates/books/components/bitrix/news.list/articles*
+**Шаг-01** - Создаем в корне сайта папку local и в ней templates
 ```sh
-cp fonts /var/www/html/bitrix/bitrix/templates/books/components/bitrix/news.list/articles
+mkdir local
+mkdir local/templates
+```
+**Шаг-02** - Копируем в неё шаблон сайта, содержащий компонент news.list
+```sh
+cp bitrix/templates/books local/templates/
+```
+**Шаг-03** - Копируем из исходного шаблона папку fonts в папку шаблона компонента */bitrix/bitrix/templates/books/components/bitrix/news.list/articles*
+```sh
+cp fonts bitrix/templates/books/components/bitrix/news.list/articles
 ```
 
-**Шаг-02** - Удаляем файл стилей style.css в папке */bitrix/bitrix/templates/books/components/bitrix/news.list/articles* и вставляем common.css переименовав
+**Шаг-04** - Удаляем файл стилей style.css в папке *local/templates/books/components/bitrix/news.list/articles* и вставляем common.css переименовав
 ```sh
-rm /var/www/html/bitrix/bitrix/templates/books/components/bitrix/news.list/articles/style.css
-mv css/common.css /var/www/html/bitrix/bitrix/templates/books/components/bitrix/news.list/articles/style.css
+rm local/templates/books/components/bitrix/news.list/articles/style.css
+mv css/common.css local/templates/books/components/bitrix/news.list/articles/style.css
 ```
 
-**Шаг-03** - Переписываем */bitrix/bitrix/templates/books/components/bitrix/news.list/articles/template.php* в соответствии с заданой разметкой из index.html
+**Шаг-05** - Переписываем *local/templates/books/components/bitrix/news.list/articles/template.php* в соответствии с заданой разметкой из index.html
 ```php
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <div id="barba-wrapper">
@@ -54,19 +63,19 @@ mv css/common.css /var/www/html/bitrix/bitrix/templates/books/components/bitrix/
 </div>
 ```
 
-**Шаг-04** - В админке *Контент - Инфоблоки - Типы инфоблоков - Новости* создаем новый инфоблок. 
+**Шаг-06** - В админке *Контент - Инфоблоки - Типы инфоблоков - Новости* создаем новый инфоблок. 
 
-**Шаг-05** - В админке *Контент - Новости* создаем 6 элементов новостей в соответствии index.html
+**Шаг-07** - В админке *Контент - Новости* создаем 6 элементов новостей в соответствии index.html
 
-**Шаг-06** - Включаем в компоненте *Новости* работу с ЧПУ, а также прописываем в странице детального просмотра значение #ELEMENT_CODE#
+**Шаг-08** - Включаем в компоненте *Новости* работу с ЧПУ, а также прописываем в странице детального просмотра значение #ELEMENT_CODE#
 
-**Шаг-07** - В открытой части создаем пустую страницу с компонентом *Контент - Статьи и новости - Список новостей*
+**Шаг-09** - В открытой части создаем пустую страницу с компонентом *Контент - Статьи и новости - Список новостей*
 
-**Шаг-08** - В параметрах компонента *Список новостей* указываем в поле шаблон компонента - articles
+**Шаг-10** - В параметрах компонента *Список новостей* указываем в поле шаблон компонента - articles
 
-**Шаг-09** - В параметрах компонента *Список новостей* указываем в поле кода информационного блока созданный ранее инфоблок
+**Шаг-11** - В параметрах компонента *Список новостей* указываем в поле кода информационного блока созданный ранее инфоблок
 
-**Шаг-10** - В параметрах компонента *Список новостей* указываем в поле URL странице детального просмотра значение #ELEMENT_CODE#
+**Шаг-12** - В параметрах компонента *Список новостей* указываем в поле URL странице детального просмотра значение #ELEMENT_CODE#
 
 
 
